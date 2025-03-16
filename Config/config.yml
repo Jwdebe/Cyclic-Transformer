@@ -1,0 +1,41 @@
+EncoderLayer: Vanilla
+PositionalEncoder: Vanilla
+eeg_encoders: 2
+acc_encoders: 2
+num_cross_encoders: 2
+num_decoders: 2
+num_recons_decoders: 2
+dimension_eeg: 128
+dimension_acc: 36
+dimension_emg: 64
+number_heads: 4
+reduction_eeg: [96, 64]
+reduction_acc: [48, 64]
+recons_eeg_latents:  [128]
+recons_acc_latents: [36]
+encoder_dropout: 0.1
+feat_encoder_dropout: 0.25
+
+dimension_bottleneck: 16
+
+ValidationSplit: 6
+
+seq_stride: 1
+seq_length: 60 # num times scales
+scale: 0.5
+imbalance_factor: 5
+batch_size: 32
+
+data_path: '/'
+training_data_path: '/'
+results_path: '/'
+classifier_path: '/'
+summary_path: '/
+
+epoch: 25
+learning_rate: 5e-5
+epsilon: 1e-5
+l2: 1e-4
+scheduler: exponential
+ClassificationLoss: BCE    
+
